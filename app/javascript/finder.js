@@ -5,7 +5,10 @@
  */
 
 // Initialize Materialize select statement and modal functionality
-$('select').material_select();
+$(document).ready(function() {
+    $('select').material_select();
+});
+
 
 
 
@@ -13,7 +16,26 @@ $('select').material_select();
 $("#submit-answers").on("click", function(){
     // Prevent form from submitting
     event.preventDefault();
+    /*
+     // Form validation
+     function validateForm() {
+     var isValid = true;
+     $('.form-control').each(function() {
+     if ( $(this).val() === '' )
+     isValid = false;
+     });
 
+     $('.chosen-select').each(function() {
+
+     if( $(this).val() === "")
+     isValid = false
+     })
+     return isValid;
+     }
+     */
+    // If all required fields are filled
+    //  if (validateForm() == true)
+    //  {
     // Create an object for the user's data
     var userData = {
         name: $("#name").val(),
@@ -36,19 +58,18 @@ $("#submit-answers").on("click", function(){
         displayModal(data);
 
     });
+//    }
+    //   else
+    //   {
+    //       alert("Please fill out all fields before submitting!");
+    //   }
 
+    function displayModal(friendtMatch) {
+        console.log('modal function triggered');
 
+        $(".modal-body").append('<p>Your match is ' + friendtMatch.name + '!</p>');
+        $(".modal-body").append('<img src="' + friendtMatch.photo + '">');
+
+        $('#resultsModal').modal('open');
+    }
 });
-
-/**
- *
- * @param friendtMatch
- */
-function displayModal(friendtMatch) {
-    console.log('modal function triggered');
-
-    $(".modal-body").append('<p>Your match is ' + friendtMatch.name + '!</p>');
-    $(".modal-body").append('<img src="' + friendtMatch.photo + '">');
-
-    $('#resultsModal').modal('open');
-}
