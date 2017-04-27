@@ -13,12 +13,12 @@ var friendsArray = [
     },
     {
         name: "John Jones",
-        photo: "http://www.eurweb.com/wp-content/uploads/2016/07/halle-berry-head-face.jpg",
+        photo: "http://static.ddmcdn.com/en-us/apl/breedselector/images/breed-selector/dogs/breeds/shiba-inu_04_lg.jpg",
         scores: ['5','4','3','1','2','3','4','2','5','4']
     },
     {
-        name: "Betty Boop Jones",
-        photo: "http://www.eurweb.com/wp-content/uploads/2016/07/halle-berry-head-face.jpg",
+        name: "Brad Pitt",
+        photo: "hhttp://img.usmagazine.com/article-leads-vertical-300/1250530894_brad_pitt_290x402.jpg",
         scores: ['1','1','1','1','1','1','1','1','1','1']
     }
 ];

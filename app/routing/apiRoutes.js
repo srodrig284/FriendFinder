@@ -38,23 +38,25 @@ module.exports = function(app) {
         // find a the best match
         if(friendsList.length > 0)
         {
-            for(j = 0; j < friendsList.length; j++){
+            for(j = 0; j < friendsList.length; j++)
+            {
                 console.log("Database Friend Comparing = ", friendsList[j].name);
 
-                var matchedFriend = convertScores(friendsList[j].scores);
-                console.log("matched friend converted scores = ", matchedFriend);
+                var matchedFriendScore = convertScores(friendsList[j].scores);
+                console.log("matched friend converted scores = ", matchedFriendScore);
 
                 tempDiff = 0;  // reset
                 console.log("friendsList[j].scores.length = ", friendsList[j].scores.length);
-                console.log("matchedFriend scores length = ", matchedFriend.length);
+                console.log("matchedFriend scores length = ", matchedFriendScore.length);
+                console.log()
 
                 // compare each friend's score to the new friend's score
-                for (i = 0; i > matchedFriend.length; i++)
+                for (i = 0; i < matchedFriendScore.length; i++)
                 {
-                    console.log("newfriendscores.score = ", newfriendscores.scores[i]);
-                    console.log("matchedFriend[i].name = ", matchedFriend[i].name);
+                    console.log("newfriendscores.score = ", newfriendscores[i]);
+                    console.log("matchedFriendScore[i].score = ", matchedFriendScore[i]);
 
-                    thisScoreDiff = math.abs(newfriendscores.scores[i] - matchedFriend[i]);
+                    thisScoreDiff = Math.abs(newfriendscores[i] - matchedFriendScore[i]);
                     console.log("thisScoreDiff", thisScoreDiff);
                     tempDiff = tempDiff + thisScoreDiff;
                     console.log("tempDiff = ", tempDiff);
