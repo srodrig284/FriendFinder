@@ -44,6 +44,7 @@ module.exports = function(app) {
                     if (thisScoreDiff < 0)
                     { // must be negative, make it positive
                         thisScoreDiff = thisScoreDiff * -1;
+                        //math.abs();
                         tempDiff = tempDiff + thisScoreDiff;
                     }
                 }
