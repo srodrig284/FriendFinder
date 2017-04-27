@@ -4,6 +4,12 @@
 // These data sources hold arrays of information on table-data, waitinglist, etc.
 // ===============================================================================
 
+/**
+ * Friend Finder
+ * Created by: Sandra Rodriguez
+ * UCF Bootcamp 2017
+ */
+
 var friendsList = require("../data/friends");
 
 // ===============================================================================

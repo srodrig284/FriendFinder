@@ -1,3 +1,15 @@
+// ===============================================================================
+// LOAD DATA
+// We are linking our routes to a series of "data" sources.
+// These data sources hold arrays of information on table-data, waitinglist, etc.
+// ===============================================================================Fre
+
+/**
+ * Friend Finder
+ * Created by: Sandra Rodriguez
+ * UCF Bootcamp 2017
+ */
+
 // ==============================================================================
 // DEPENDENCIES
 // Series of npm packages that we will use to give our server useful functionality

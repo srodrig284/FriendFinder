@@ -2,6 +2,13 @@
 // DEPENDENCIES
 // We need to include the path package to get the correct file path for our html
 // ===============================================================================
+
+/**
+ * Friend Finder
+ * Created by: Sandra Rodriguez
+ * UCF Bootcamp 2017
+ */
+
 var path = require("path");
 
 
