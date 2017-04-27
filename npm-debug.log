@@ -1,0 +1,116 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/Cellar/node/7.3.0/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   'nodem',
+1 verbose cli   'server.js' ]
+2 info using npm@3.10.10
+3 info using node@v7.3.0
+4 silly loadCurrentTree Starting
+5 silly install loadCurrentTree
+6 silly install readLocalPackageData
+7 silly fetchPackageMetaData nodem
+8 silly fetchPackageMetaData server.js
+9 silly fetchNamedPackageData nodem
+10 silly mapToRegistry name nodem
+11 silly mapToRegistry using default registry
+12 silly mapToRegistry registry https://registry.npmjs.org/
+13 silly mapToRegistry data Result {
+13 silly mapToRegistry   raw: 'nodem',
+13 silly mapToRegistry   scope: null,
+13 silly mapToRegistry   escapedName: 'nodem',
+13 silly mapToRegistry   name: 'nodem',
+13 silly mapToRegistry   rawSpec: '',
+13 silly mapToRegistry   spec: 'latest',
+13 silly mapToRegistry   type: 'tag' }
+14 silly mapToRegistry uri https://registry.npmjs.org/nodem
+15 silly fetchOtherPackageData server.js
+16 silly cache add args [ 'server.js', null ]
+17 verbose cache add spec server.js
+18 verbose request uri https://registry.npmjs.org/nodem
+19 verbose request no auth needed
+20 info attempt registry request try #1 at 8:10:16 AM
+21 verbose request id 6de7667257d383e9
+22 http request GET https://registry.npmjs.org/nodem
+23 silly cache add parsed spec Result {
+23 silly cache add   raw: 'server.js',
+23 silly cache add   scope: null,
+23 silly cache add   escapedName: 'server.js',
+23 silly cache add   name: null,
+23 silly cache add   rawSpec: 'server.js',
+23 silly cache add   spec: '/Users/Sandra/Bootcamp/Homework/FriendFinder/server.js',
+23 silly cache add   type: 'local' }
+24 silly addLocalTarball shasum (computed) d58aa06e2dfc2faa7079559a2bab5fafea02f79e
+25 verbose addTmpTarball /Users/Sandra/Bootcamp/Homework/FriendFinder/server.js not in flight; adding
+26 verbose correctMkdir /Users/Sandra/.npm correctMkdir not in flight; initializing
+27 verbose addTmpTarball validating metadata from /Users/Sandra/Bootcamp/Homework/FriendFinder/server.js
+28 verbose tar unpack /Users/Sandra/Bootcamp/Homework/FriendFinder/server.js
+29 verbose tar unpacking to /var/folders/5l/x3vrh7h14dg6p1lsh7ylj5jw0000gn/T/npm-904-3c03ddf4/unpack-88fcf36a
+30 silly gentlyRm /var/folders/5l/x3vrh7h14dg6p1lsh7ylj5jw0000gn/T/npm-904-3c03ddf4/unpack-88fcf36a is being purged
+31 verbose gentlyRm don't care about contents; nuking /var/folders/5l/x3vrh7h14dg6p1lsh7ylj5jw0000gn/T/npm-904-3c03ddf4/unpack-88fcf36a
+32 silly gunzTarPerm modes [ '755', '644' ]
+33 error not a package /Users/Sandra/Bootcamp/Homework/FriendFinder/server.js
+34 error addLocal Could not install /Users/Sandra/Bootcamp/Homework/FriendFinder/server.js
+35 silly fetchPackageMetaData Error: ENOENT: no such file or directory, open '/var/folders/5l/x3vrh7h14dg6p1lsh7ylj5jw0000gn/T/npm-904-3c03ddf4/unpack-88fcf36a/package.json'
+35 silly fetchPackageMetaData  error for server.js { Error: ENOENT: no such file or directory, open '/var/folders/5l/x3vrh7h14dg6p1lsh7ylj5jw0000gn/T/npm-904-3c03ddf4/unpack-88fcf36a/package.json'
+35 silly fetchPackageMetaData   errno: -2,
+35 silly fetchPackageMetaData   code: 'ENOENT',
+35 silly fetchPackageMetaData   syscall: 'open',
+35 silly fetchPackageMetaData   path: '/var/folders/5l/x3vrh7h14dg6p1lsh7ylj5jw0000gn/T/npm-904-3c03ddf4/unpack-88fcf36a/package.json' }
+36 http 200 https://registry.npmjs.org/nodem
+37 verbose headers { server: 'nginx/1.10.1',
+37 verbose headers   'content-type': 'application/json',
+37 verbose headers   'last-modified': 'Wed, 22 Mar 2017 12:31:01 GMT',
+37 verbose headers   etag: 'W/"58d26e85-9c59"',
+37 verbose headers   'content-encoding': 'gzip',
+37 verbose headers   'cache-control': 'max-age=300',
+37 verbose headers   'content-length': '9016',
+37 verbose headers   'accept-ranges': 'bytes',
+37 verbose headers   date: 'Thu, 27 Apr 2017 12:10:16 GMT',
+37 verbose headers   via: '1.1 varnish',
+37 verbose headers   age: '0',
+37 verbose headers   connection: 'keep-alive',
+37 verbose headers   'x-served-by': 'cache-mia1326-MIA',
+37 verbose headers   'x-cache': 'MISS',
+37 verbose headers   'x-cache-hits': '0',
+37 verbose headers   'x-timer': 'S1493295017.610424,VS0,VE70',
+37 verbose headers   vary: 'Accept-Encoding' }
+38 silly get cb [ 200,
+38 silly get   { server: 'nginx/1.10.1',
+38 silly get     'content-type': 'application/json',
+38 silly get     'last-modified': 'Wed, 22 Mar 2017 12:31:01 GMT',
+38 silly get     etag: 'W/"58d26e85-9c59"',
+38 silly get     'content-encoding': 'gzip',
+38 silly get     'cache-control': 'max-age=300',
+38 silly get     'content-length': '9016',
+38 silly get     'accept-ranges': 'bytes',
+38 silly get     date: 'Thu, 27 Apr 2017 12:10:16 GMT',
+38 silly get     via: '1.1 varnish',
+38 silly get     age: '0',
+38 silly get     connection: 'keep-alive',
+38 silly get     'x-served-by': 'cache-mia1326-MIA',
+38 silly get     'x-cache': 'MISS',
+38 silly get     'x-cache-hits': '0',
+38 silly get     'x-timer': 'S1493295017.610424,VS0,VE70',
+38 silly get     vary: 'Accept-Encoding' } ]
+39 verbose get saving nodem to /Users/Sandra/.npm/registry.npmjs.org/nodem/.cache.json
+40 verbose correctMkdir /Users/Sandra/.npm correctMkdir not in flight; initializing
+41 silly rollbackFailedOptional Starting
+42 silly rollbackFailedOptional Finishing
+43 silly runTopLevelLifecycles Finishing
+44 silly install printInstalled
+45 verbose stack Error: ENOENT: no such file or directory, open '/var/folders/5l/x3vrh7h14dg6p1lsh7ylj5jw0000gn/T/npm-904-3c03ddf4/unpack-88fcf36a/package.json'
+46 verbose cwd /Users/Sandra/Bootcamp/Homework/FriendFinder
+47 error Darwin 16.4.0
+48 error argv "/usr/local/Cellar/node/7.3.0/bin/node" "/usr/local/bin/npm" "install" "nodem" "server.js"
+49 error node v7.3.0
+50 error npm  v3.10.10
+51 error path /var/folders/5l/x3vrh7h14dg6p1lsh7ylj5jw0000gn/T/npm-904-3c03ddf4/unpack-88fcf36a/package.json
+52 error code ENOENT
+53 error errno -2
+54 error syscall open
+55 error enoent ENOENT: no such file or directory, open '/var/folders/5l/x3vrh7h14dg6p1lsh7ylj5jw0000gn/T/npm-904-3c03ddf4/unpack-88fcf36a/package.json'
+56 error enoent ENOENT: no such file or directory, open '/var/folders/5l/x3vrh7h14dg6p1lsh7ylj5jw0000gn/T/npm-904-3c03ddf4/unpack-88fcf36a/package.json'
+56 error enoent This is most likely not a problem with npm itself
+56 error enoent and is related to npm not being able to find a file.
+57 verbose exit [ -2, true ]
