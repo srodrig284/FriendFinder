@@ -5,7 +5,9 @@
  */
 
 // // Initialize Materialize select statement and modal functionality
-$('select').material_select();
+$(document).ready(function() {
+    $('select').material_select();
+});
 
 
 
