@@ -6,15 +6,15 @@
 
 // // Initialize Materialize select statement and modal functionality
 $('select').material_select();
-$('.modal').modal();
+
 
 
 
 // Capture the form inputs
-$("#submit").on("click", function(){
+$("#submit-answers").on("click", function(){
     // Prevent form from submitting
     event.preventDefault();
-
+/*
     // Form validation
     function validateForm() {
         var isValid = true;
@@ -30,10 +30,10 @@ $("#submit").on("click", function(){
         })
         return isValid;
     }
-
+*/
     // If all required fields are filled
-    if (validateForm() == true)
-    {
+ //  if (validateForm() == true)
+  //  {
         // Create an object for the user's data
         var userData = {
             name: $("#name").val(),
@@ -53,14 +53,21 @@ $("#submit").on("click", function(){
             $('#matchImg').attr("src", data.photo);
 
             // Show the modal with the best match
-            $("#resultsModal").modal('toggle');
+            displayModal(data);
 
         });
-    }
-    else
-    {
-        alert("Please fill out all fields before submitting!");
-    }
+//    }
+ //   else
+ //   {
+ //       alert("Please fill out all fields before submitting!");
+ //   }
 
-    return false;
+    function displayModal(friendtMatch) {
+        console.log('modal function triggered');
+
+        $(".modal-body").append('<p>Your match is ' + friendtMatch.name + '!</p>');
+        $(".modal-body").append('<img src="' + friendtMatch.photo + '">');
+
+        $('#resultsModal').modal('open');
+    }
 });

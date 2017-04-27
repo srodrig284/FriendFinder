@@ -4,10 +4,8 @@
     <meta charset="UTF-8">
     <title>FriendFinder</title>
 
-    <!-- Latest compiled and minified CSS & JS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <!-- Latest compiled and minified CSS & JS -->>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 
     <!--Import Google Icon Font-->
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -30,216 +28,219 @@
 </head>
 
 <body>
-
-<div class="container">
-    <div class="light-blue lighten-2">
-        <h2 class="z-depth-5" text-align="center">Survey Questions</h2>
-    </div>
-
-
-    <h3><strong>About You</strong></h3>
-    <div class="row">
-        <form class="col s12">
-            <div class="row">
-                <div class="input-field col s12">
-                    <i class="material-icons prefix">account_circle</i>
-                    <input  id="name" type="text" class="validate" required="" aria-required="true">
-                    <label for="name" data-error="wrong" data-success="right">Name (Required)</label>
+    <div class="container">
+        <div class="row">
+            <form class="col s12">
+                <div class="light-blue lighten-2">
+                    <h2 class="z-depth-5" text-align="center">Survey Questions</h2>
                 </div>
-            </div>
 
-            <div class="row">
-                <div class="input-field col s12">
-                    <i class="material-icons prefix">add_a_photo</i>
-                    <input  id="photo" type=url class="validate" required="" aria-required="true">
-                    <label for="photo" data-error="wrong" data-success="right">Link to Photo Image (Required)</label>
+
+                <h3><strong>About You</strong></h3>
+                <div class="row">
+                    <form class="col s12">
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <i class="material-icons prefix">account_circle</i>
+                                <input  id="name" type="text" class="validate" required="" aria-required="true">
+                                <label for="name" data-error="wrong" data-success="right">Name (Required)</label>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <i class="material-icons prefix">add_a_photo</i>
+                                <input  id="photo" type=url class="validate" required="" aria-required="true">
+                                <label for="photo" data-error="wrong" data-success="right">Link to Photo Image (Required)</label>
+                            </div>
+                        </div>
+                    </form>
                 </div>
+
+                <div class="divider"></div>
+
+
+                <span class="blue-text text-darken-2"><h4><strong>Question 1</strong></h4></span>
+                <h5>Your mind is always buzzing with unexplored ideas and plans.</h5>
+                <div class="input-field col s12">
+                    <select id="q1" required="" aria-required="true">
+                        <option value="" disabled selected>Select an Option</option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
+                </div>
+
+                <div class="divider"></div>
+
+                <span class="blue-text text-darken-2"><h4><strong>Question 2</strong></h4></span>
+                <h5>Generally speaking, you rely more on your experience than your imagination.</h5>
+                <div class="input-field col s12">
+                    <select id="q2" required="" aria-required="true">
+                        <option value="" disabled selected>Select an Option</option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
+                </div>
+
+                <div class="divider"></div>
+
+                <span class="blue-text text-darken-2"><h4><strong>Question 3</strong></h4></span>
+                <h5>You find it easy to stay relaxed and focused even when there is some pressure.</h5>
+                <div class="input-field col s12">
+                    <select id="q3" required="" aria-required="true">
+                        <option value="" disabled selected>Select an Option</option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
+                </div>
+
+                <div class="divider"></div>
+
+                <span class="blue-text text-darken-2"><h4><strong>Question 4</strong></h4></span>
+                <h5>You rarely do something just out of sheer curiosity.</h5>
+                <div class="input-field col s12">
+                    <select id="q4" required="" aria-required="true">
+                        <option value="" disabled selected>Select an Option</option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
+                </div>
+
+                <div class="divider"></div>
+
+                <span class="blue-text text-darken-2"><h4><strong>Question 5</strong></h4></span>
+                <h5>People can rarely upset you.</h5>
+                <div class="input-field col s12">
+                    <select id="q5" required="" aria-required="true">
+                        <option value="" disabled selected>Select an Option</option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
+                </div>
+
+                <div class="divider"></div>
+
+                <span class="blue-text text-darken-2"><h4><strong>Question 6</strong></h4></span>
+                <h5>It is often difficult for you to relate to other people’s feelings.</h5>
+                <div class="input-field col s12">
+                    <select id="q6" required="" aria-required="true">
+                        <option value="" disabled selected>Select an Option</option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
+                </div>
+
+                <div class="divider"></div>
+
+                <span class="blue-text text-darken-2"><h4><strong>Question 7</strong></h4></span>
+                <h5>In a discussion, truth should be more important than people’s sensitivities.</h5>
+                <div class="input-field col s12">
+                    <select id="q7" required="" aria-required="true">
+                        <option value="" disabled selected>Select an Option</option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
+                </div>
+
+                <div class="divider"></div>
+
+                <span class="blue-text text-darken-2"><h4><strong>Question 8</strong></h4></span>
+                <h5>You rarely get carried away by fantasies and ideas.</h5>
+                <div class="input-field col s12">
+                    <select id="q8" required="" aria-required="true">
+                        <option value="" disabled selected>Select an Option</option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
+                </div>
+
+                <div class="divider"></div>
+
+                <span class="blue-text text-darken-2"><h4><strong>Question 9</strong></h4></span>
+                <h5>You think that everyone’s views should be respected regardless of whether they are supported by facts or not.</h5>
+                <div class="input-field col s12">
+                    <select id="q9" required="" aria-required="true">
+                        <option value="" disabled selected>Select an Option</option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
+                </div>
+
+                <div class="divider"></div>
+
+                <span class="blue-text text-darken-2"><h4><strong>Question 10</strong></h4></span>
+                <h5>You feel more energetic after spending time with a group of people.</h5>
+                <div class="input-field col s12">
+                    <select id="q10" required="" aria-required="true">
+                        <option value="" disabled selected>Select an Option</option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
+                </div>
+
+                <br>
+                <br>
+
+                <!-- Submit Button -->
+                <button type="submit" class="btn waves-effect waves-light" id="submit-answers" name="action" style="width:100%">Submit
+                    <i class="material-icons right">send</i>
+                </button>
+            </form>
+        </div>
+
+        <br>
+        <hr>
+        <br>
+        <footer class="footer">
+            <div class="container">
+                <p><a href="/api/friends">API Friends List</a> | <a href="https://github.com/srodrig284/FriendFinder.git">GitHub Repo</a></p>
             </div>
-        </form>
-    </div>
+        </footer>
 
-    <div class="divider"></div>
+    </div> <!--END container class -->
 
+    <!-- Modal -->
+    <div id="resultsModal" class="modal">
+        <div class="modal-content">
+            <h4>Your Best Match</h4>
+            <div class="modal-body">
 
-    <span class="blue-text text-darken-2"><h4><strong>Question 1</strong></h4></span>
-    <h5>Your mind is always buzzing with unexplored ideas and plans.</h5>
-    <div class="input-field col s12">
-        <select id="q1">
-            <option value="" disabled selected>Select an Option</option>
-            <option value="1">1 (Strongly Disagree)</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5 (Strongly Agree)</option>
-        </select>
-    </div>
-
-    <div class="divider"></div>
-
-    <span class="blue-text text-darken-2"><h4><strong>Question 2</strong></h4></span>
-    <h5>Generally speaking, you rely more on your experience than your imagination.</h5>
-    <div class="input-field col s12">
-        <select id="q2">
-            <option value="" disabled selected>Select an Option</option>
-            <option value="1">1 (Strongly Disagree)</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5 (Strongly Agree)</option>
-        </select>
-    </div>
-
-    <div class="divider"></div>
-
-    <span class="blue-text text-darken-2"><h4><strong>Question 3</strong></h4></span>
-    <h5>You find it easy to stay relaxed and focused even when there is some pressure.</h5>
-    <div class="input-field col s12">
-        <select id="q3">
-            <option value="" disabled selected>Select an Option</option>
-            <option value="1">1 (Strongly Disagree)</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5 (Strongly Agree)</option>
-        </select>
-    </div>
-
-    <div class="divider"></div>
-
-    <span class="blue-text text-darken-2"><h4><strong>Question 4</strong></h4></span>
-    <h5>You rarely do something just out of sheer curiosity.</h5>
-    <div class="input-field col s12">
-        <select id="q4">
-            <option value="" disabled selected>Select an Option</option>
-            <option value="1">1 (Strongly Disagree)</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5 (Strongly Agree)</option>
-        </select>
-    </div>
-
-    <div class="divider"></div>
-
-    <span class="blue-text text-darken-2"><h4><strong>Question 5</strong></h4></span>
-    <h5>People can rarely upset you.</h5>
-    <div class="input-field col s12">
-        <select id="q5">
-            <option value="" disabled selected>Select an Option</option>
-            <option value="1">1 (Strongly Disagree)</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5 (Strongly Agree)</option>
-        </select>
-    </div>
-
-    <div class="divider"></div>
-
-    <span class="blue-text text-darken-2"><h4><strong>Question 6</strong></h4></span>
-    <h5>It is often difficult for you to relate to other people’s feelings.</h5>
-    <div class="input-field col s12">
-        <select id="q6">
-            <option value="" disabled selected>Select an Option</option>
-            <option value="1">1 (Strongly Disagree)</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5 (Strongly Agree)</option>
-        </select>
-    </div>
-
-    <div class="divider"></div>
-
-    <span class="blue-text text-darken-2"><h4><strong>Question 7</strong></h4></span>
-    <h5>In a discussion, truth should be more important than people’s sensitivities.</h5>
-    <div class="input-field col s12">
-        <select id="q7">
-            <option value="" disabled selected>Select an Option</option>
-            <option value="1">1 (Strongly Disagree)</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5 (Strongly Agree)</option>
-        </select>
-    </div>
-
-    <div class="divider"></div>
-
-    <span class="blue-text text-darken-2"><h4><strong>Question 8</strong></h4></span>
-    <h5>You rarely get carried away by fantasies and ideas.</h5>
-    <div class="input-field col s12">
-        <select id="q8">
-            <option value="" disabled selected>Select an Option</option>
-            <option value="1">1 (Strongly Disagree)</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5 (Strongly Agree)</option>
-        </select>
-    </div>
-
-    <div class="divider"></div>
-
-    <span class="blue-text text-darken-2"><h4><strong>Question 9</strong></h4></span>
-    <h5>You think that everyone’s views should be respected regardless of whether they are supported by facts or not.</h5>
-    <div class="input-field col s12">
-        <select id="q9">
-            <option value="" disabled selected>Select an Option</option>
-            <option value="1">1 (Strongly Disagree)</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5 (Strongly Agree)</option>
-        </select>
-    </div>
-
-    <div class="divider"></div>
-
-    <span class="blue-text text-darken-2"><h4><strong>Question 10</strong></h4></span>
-    <h5>You feel more energetic after spending time with a group of people.</h5>
-    <div class="input-field col s12">
-        <select id="q10">
-            <option value="" disabled selected>Select an Option</option>
-            <option value="1">1 (Strongly Disagree)</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5 (Strongly Agree)</option>
-        </select>
-    </div>
-
-    <br>
-    <br>
-
-    <!-- Submit Button -->
-    <button type="submit" class="btn waves-effect waves-light" id="submit" name="action" style="width:100%">Submit
-        <i class="material-icons right">send</i>
-    </button>
-
-    <br>
-    <hr>
-    <br>
-    <footer class="footer">
-        <div class="container">
-            <p><a href="/api/friends">API Friends List</a> | <a href="https://github.com/srodrig284/FriendFinder.git">GitHub Repo</a></p>
+            </div>
         </div>
-    </footer>
-
-</div> <!--END container class -->
-
-<!-- Modal -->
-<div id="resultsModal" class="modal">
-    <div class="modal-content">
-        <h4>Your Best Match</h4>
-        <div class="modal-body">
-
+        <div class="modal-footer">
+            <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>
         </div>
     </div>
-    <div class="modal-footer">
-        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>
-    </div>
-</div>
 
 
 
