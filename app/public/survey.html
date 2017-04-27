@@ -256,22 +256,13 @@
             $('.validate').each(function() {
                 if ( $(this).val() === '' )
                     isValid = false;
-                console.log("validating validate");
             });
-            console.log("after validate isValid = ", isValid);
 
-          /*  $('.validateopt').each(function() {
-                if ( $(this).val() === '' )
+            $('select').each(function() {
+                if($(this).find('option:selected[value]').val() === '')
                     isValid = false;
-                console.log("validating validateopt");
             });
-            */
-            $("select[required]").each(function() {
-                if ( $(this).val() === '' )
-                    isValid = false;
-                console.log("validating validateopt");
-            });
-            console.log("after validateopt isValid = ", isValid);
+
             return isValid;
         }
 
@@ -284,7 +275,7 @@
                 photo: $("#photo").val(),
                 scores: [$("#q1").val(), $("#q2").val(), $("#q3").val(), $("#q4").val(), $("#q5").val(), $("#q6").val(), $("#q7").val(), $("#q8").val(), $("#q9").val(), $("#q10").val()]
             };
-
+            //console.log("userData = :", userData.scores);
 
             // Grab the URL of the website
             var currentURL = window.location.origin;
@@ -293,11 +284,25 @@
             $.post(currentURL + "/api/friends", userData, function (data) {
 
                 // Grab the result from the AJAX post so that the best match's name and photo are displayed.
-                $("#matchName").text(data.name);
-                $('#matchImg').attr("src", data.photo);
+                console.log("Match = ", data);
+                if(data)
+                {
 
-                // Show the modal with the best match
-                displayModal(data);
+                    //Parse data as JSON object
+
+                    console.log("Match Sent = ", data);
+
+                    // Show the modal with the best match
+                    $(".modal-body").empty();
+                    $(".modal-body").append('<p>Your match is ' + data[0].name + '!</p>');
+                    $(".modal-body").append('<img src="' + data[0].photo + '">');
+
+                    $('#resultsModal').modal('open');
+                }
+                else
+                {
+                    alert("No Match was Found!");
+                }
 
             });
         }
@@ -307,19 +312,5 @@
         }
 
     });
-
-    /**
-     *
-     * @param friendtMatch
-     */
-    function displayModal(friendtMatch) {
-        console.log('modal function triggered');
-
-        $(".modal-body").empty();
-        $(".modal-body").append('<p>Your match is ' + friendtMatch.name + '!</p>');
-        $(".modal-body").append('<img src="' + friendtMatch.photo + '">');
-
-        $('#resultsModal').modal('open');
-    }
 
 </script>

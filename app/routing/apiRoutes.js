@@ -24,46 +24,82 @@ module.exports = function(app) {
      * API POST Requests
      */
     app.post("/api/friends", function(req, res) {
-        var newfriend = req.body;
+        var newfriendscores = convertScores(req.body.scores);
+
+
+        console.log("new friend converted scores = ", newfriendscores);
 
         var scoreIndex = 0;
         var totalScoreDiff = 200;
         var tempDiff = 0;
         var thisScoreDiff = 0;
         var friendmatched = [];
-
+        console.log("current list length= ",friendsList.length);
         // find a the best match
-        if(friendsList > 0)
+        if(friendsList.length > 0)
         {
-            $.each(friendsList, function(index, value){
+            for(j = 0; j < friendsList.length; j++){
+                console.log("Database Friend Comparing = ", friendsList[j].name);
+
+                var matchedFriend = convertScores(friendsList[j].scores);
+                console.log("matched friend converted scores = ", matchedFriend);
+
                 tempDiff = 0;  // reset
+                console.log("friendsList[j].scores.length = ", friendsList[j].scores.length);
+                console.log("matchedFriend scores length = ", matchedFriend.length);
+
                 // compare each friend's score to the new friend's score
-                for (i = 0; i > value.scores.length; i++)
+                for (i = 0; i > matchedFriend.length; i++)
                 {
-                    thisScoreDiff = newfriend.scores[index] - value.scores;
-                    if (thisScoreDiff < 0)
-                    { // must be negative, make it positive
-                        thisScoreDiff = thisScoreDiff * -1;
-                        //math.abs();
-                        tempDiff = tempDiff + thisScoreDiff;
-                    }
+                    console.log("newfriendscores.score = ", newfriendscores.scores[i]);
+                    console.log("matchedFriend[i].name = ", matchedFriend[i].name);
+
+                    thisScoreDiff = math.abs(newfriendscores.scores[i] - matchedFriend[i]);
+                    console.log("thisScoreDiff", thisScoreDiff);
+                    tempDiff = tempDiff + thisScoreDiff;
+                    console.log("tempDiff = ", tempDiff);
                 }
+                console.log("totalScoreDiff", totalScoreDiff);
                  // check if this difference is less that the previous difference
                 if(tempDiff < totalScoreDiff)
                 {
+                    console.log("New friend is less");
                     totalScoreDiff = tempDiff;  // replace it
                     friendmatched = [];  // clear it
-                    friendmatched.push(friendsList[index]);
+                    friendmatched.push(friendsList[j]);
                 }
-            });
+                console.log("FriendMatch = ",friendmatched );
+                console.log("J = ", j);
+                console.log("Difference = ",totalScoreDiff);
+            }
+
             // add new friend to the database
-            friendsList.push(newfriend);
+            console.log("PUSHING TO DATABASE");
+            friendsList.push(req.body);
+            console.log("Sending match = ", friendmatched);
             res.json(friendmatched);
         }
         else
         {
+            friendsList.push(req.body);
             res.json(false);
         }
 
     });
 };
+
+function convertScores(array)
+{
+    var convertedArray = [];
+
+    for (var i = 0; i < array.length; i++){
+
+        //convert array string to integer
+        var scoreInteger = parseInt(array[i]);
+
+        //push to temp array
+        convertedArray.push(scoreInteger);
+    }
+
+    return convertedArray;
+}
